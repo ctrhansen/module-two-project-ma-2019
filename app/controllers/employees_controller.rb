@@ -4,6 +4,7 @@ class EmployeesController < ApplicationController
 #create
 def new
     @employee = Employee.new
+    @company = Company.all
 end
 
 def create

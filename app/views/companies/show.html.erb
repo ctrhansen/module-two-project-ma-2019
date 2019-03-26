@@ -8,7 +8,7 @@
 <h3>Website: <%=@company.website%></h3><br>
 <h3>Description: <%=@company.bio%></h3><br>
 <h3>Employees:  <%= @company.employee.all.name %></h3><br>
-<h3>Client List: <%= link_to @company.client.all.name, client_path(@company.client)%> </h3>
+<h3>Client List: <%= link_to @company.client.name, client_path(@company.client)%> </h3>
 
 <div>
   <%= link_to "Edit Company", edit_company_path(@company) %>
