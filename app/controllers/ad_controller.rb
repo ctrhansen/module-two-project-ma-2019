@@ -1,2 +1,0 @@
-class AdController < ApplicationController
-end

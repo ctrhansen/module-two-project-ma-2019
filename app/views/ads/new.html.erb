@@ -1,0 +1,22 @@
+<h2>Create New Ad</h2>
+<%= form_for (@ad) do |f| %>
+    <label>Name</label>
+    <%= f.text_field(:name)%><br>
+    <%= f.label(:client_id)%>
+    <%= f.text_number(:client_id)%><br>
+    <%= f.label(:ad_type)%>
+    <%= f.text_string(:ad_type)%><br>
+    <%= f.label(:picture)%>
+    <%= f.text_string(:picture)%><br>
+    <%= f.label(:location)%>
+    <%= f.text_string(:location)%><br>
+    <%= f.label(:target_age)%>
+    <%= f.text_string(:target_age)%><br>
+    <%= f.label(:copy)%>
+    <%= f.text_string(:copy)%><br>
+    <%= f.label(:duration)%>
+    <%= f.text_string(:duration)%><br>
+    <%= f.label(:cost)%>
+    <%= f.text_string(:cost)%><br>
+    <%= f.submit %>
+    <% end %>
