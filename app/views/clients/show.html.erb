@@ -1,0 +1,13 @@
+<h1>Client: <%=@client.name%></h1>
+
+<img src=<%= @client.logo%> alt= "Client Logo">
+
+
+<h3>Company: <%= link_to @client.company.name, company_path(@client.company) %></h3>
+
+
+
+
+<%= form_tag client_path(@client.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@client.name}" %>
+<% end %>
