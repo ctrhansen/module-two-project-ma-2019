@@ -1,18 +1,18 @@
-<h2><%= @ad.name %></h2>
+<h2><%= @ad.name.capitalize %></h2>
 <h3>Name: </h3>
-<%= @ad.name %>
+<%= @ad.name.capitalize %>
 <h3>Client: </h3>
-<%= @ad.client.name %>
+<%= @ad.client.name.capitalize %>
 <h3>Ad Type: </h3>
-<%= @ad.ad_type %>
+<%= @ad.ad_type.capitalize %>
 <h3>Picture: </h3>
-<%= @ad.picture %>
+<img src = <%= @ad.picture %> alt = "<% @ad %>">
 <h3>Location: </h3>
-<%= @ad.location %>
+<%= @ad.location.capitalize %>
 <h3>Target Age: </h3>
 <%= @ad.target_age %>
 <h3>Copy: </h3>
-<%= @ad.copy %>
+<%= @ad.copy.capitalize %>
 <h3>Duration: </h3>
 <%= @ad.duration %>
 <h3>Cost: </h3>
