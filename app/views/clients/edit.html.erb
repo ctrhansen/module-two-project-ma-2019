@@ -1,0 +1,11 @@
+<h1> Edit Client </h1>
+
+<%= form_for :client do |f| %>
+  <%=f.label :name %><br>
+  <%=f.text_field :name %><br>
+  <%=f.label :logo, "Client's Logo:" %><br>
+  <%=f.file_field :logo %><br>
+  <%=f.label :company %><br>
+  <%=f.collection_select :company_id, Company.all, :id, :name %><br>
+  <%=f.submit "Edit Client"%>
+<% end %>

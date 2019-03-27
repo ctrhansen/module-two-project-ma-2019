@@ -1,16 +1,30 @@
-<h1>PROFILE</h1>
+<h1>COMPANY PROFILE</h1>
 <h2><%=@company.name%></h2>
 
-<h3><img_src>=<%=@company.logo%> alt = "Company Logo"</img_src></h3>
+<img src=<%= @company.logo%> alt= "Company Logo">
 
 <h3>Company Address: <%=@company.address%></h3><br>
 
 <h3>Website: <%=@company.website%></h3><br>
 <h3>Description: <%=@company.bio%></h3><br>
-<h3>Employees:  <%= @company.employee.all.name %></h3><br>
-<h3>Client List: <%= link_to @company.client.all.name, client_path(@company.client)%> </h3>
 
-<div>
-  <%= link_to "Edit Company", edit_company_path(@company) %>
 
-</div>
+<h3>Employees:  <% @company.employees.each do |e| %><br>
+  <%= e.name %>
+    <img src=<%= e.photo %> alt= "Employee Photo">
+
+<% end %>
+  </h3>
+
+<h3>Client List:  <% @company.clients.each do |c| %><br>
+    <%= c.name %>
+    <img src=<%= c.logo %> alt= "Client Logo">
+
+  <% end %>
+</h3><br>
+
+<h2> <%= link_to "Edit Company", edit_company_path(@company) %></h2>
+
+<%= form_tag company_path(@company.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@company.name}" %>
+<% end %>

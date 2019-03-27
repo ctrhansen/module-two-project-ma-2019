@@ -1,0 +1,16 @@
+<h1><%=@campaign.name%></h1>
+
+<h3>Ad(s): <%= link_to @campaign.ad.name, ad_path(@campaign.ad) %></h3>
+
+<h3>Employee(s): <%= link_to @campaign.employee.name, employee_path(@campaign.employee) %></h3>
+
+<h3>Client: <%= link_to @campaign.client, clients_path(@client)%></h3>
+
+<div>
+  <%= link_to "Edit Campaign", edit_campaign_path(@campaign) %>
+</div>
+
+
+<%= form_tag campaign_path(@campaign.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@campaign.name}" %>
+<% end %>
