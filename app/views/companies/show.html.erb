@@ -8,6 +8,8 @@
 <h3>Website: <%=@company.website%></h3><br>
 <h3>Description: <%=@company.bio%></h3><br>
 
+<h3>Total Number of Employees: <%= @company.total_employees%></h3>
+
 
 <h3>Employees:  <% @company.employees.each do |e| %><br>
   <%= e.name %>
@@ -15,6 +17,8 @@
 
 <% end %>
   </h3>
+
+<h3>Total Number of Clients: <%= @company.total_clients%></h3>
 
 <h3>Client List:  <% @company.clients.each do |c| %><br>
     <%= c.name %>

@@ -10,6 +10,13 @@
   <%= link_to "Edit Campaign", edit_campaign_path(@campaign) %>
 </div>
 
+<h3> STATS </h3>
+<h4> The average ROI of an ad in this campaign is: <%=@campaign.avg_roi%></h4>
+<h4> Total views for campaign: <%=@campaign.total_views %></h4>
+<h4> Total clicks for campaign: <%=@campaign.total_clicks %></h4>
+
+
+<%= link_to "View All Reports", reports_path(@campaign) %>
 
 <%= form_tag campaign_path(@campaign.id), method: "delete" do %>
   <%= submit_tag "Delete #{@campaign.name}" %>

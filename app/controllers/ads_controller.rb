@@ -3,6 +3,7 @@ class AdsController < ApplicationController
     #create
     def new
         @ad = Ad.new
+        @client = Client.all
     end
 
     def create

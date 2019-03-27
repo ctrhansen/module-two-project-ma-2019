@@ -5,8 +5,17 @@
 
 <h3>Company: <%= link_to @client.company.name, company_path(@client.company) %></h3>
 
+<h3>Total Number of Ads: <%= @client.total_ads%></h3>
 
 
+<h3> Recent Ads:</h3>
+<ul>
+  <% @client.most_recent_ads.each do |p| %>
+    <li><%= link_to p.name_type, ad_path(p) %></li>
+  <% end %>
+</ul>
+
+<h3> Most Expensive Ad: <%= @client.most_expensive_ad.name %> <%= @client.most_expensive_ad.cost %></h3>
 
 <%= form_tag client_path(@client.id), method: "delete" do %>
   <%= submit_tag "Delete #{@client.name}" %>
