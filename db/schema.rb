@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_27_154650) do
     t.string "target_age"
     t.string "copy"
     t.string "duration"
-    t.string "cost"
+    t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_ads_on_client_id"

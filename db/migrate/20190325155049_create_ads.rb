@@ -9,7 +9,7 @@ class CreateAds < ActiveRecord::Migration[5.2]
       t.string :target_age
       t.string :copy
       t.string :duration
-      t.string :cost
+      t.float :cost
       t.timestamps
     end
   end
