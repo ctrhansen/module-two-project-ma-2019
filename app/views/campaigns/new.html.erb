@@ -1,0 +1,13 @@
+<h1> Create a New Campaign </h1>
+
+<%= form_for Campaign.new do |f| %>
+  <%=f.label :name %><br>
+  <%=f.text_field :name %><br>
+  <%=f.label :ad %><br>
+  <%=f.collection_select :ad_id, Ad.all, :id, :name %><br>
+  <%=f.label :employee %><br>
+  <%=f.collection_select :employee_id, Employee.all, :id, :name %><br>
+  <%=f.label :client %><br>
+  <%=f.text_field :client %><br>
+  <%=f.submit "Create Campaign"%>
+<% end %>
