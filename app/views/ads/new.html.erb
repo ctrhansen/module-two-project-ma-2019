@@ -5,8 +5,11 @@
     <%= f.label(:client_id)%>
     <%= f.collection_select :client_id, Client.all, :id, :name %><br>
     <%= f.label(:ad_type)%>
-    <%= f.text_field(:ad_type)%><br>
-    <%= f.label(:picture)%>
+    <select name="Ad Type:"><br>
+        <option value="digital">Digital</option>
+        <option value="social_media">Social Media</option>
+        <option value="traditional">Traditional</option>
+    <%= f.label(:picture)%><br>
     <%= f.file_field(:picture)%><br>
     <%= f.label(:location)%>
     <%= f.text_field(:location)%><br>
