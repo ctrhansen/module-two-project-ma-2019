@@ -7,6 +7,11 @@
 
 <h3>Website: <%=@company.website%></h3><br>
 <h3>Description: <%=@company.bio%></h3><br>
+<<<<<<< HEAD
+<h3>Employees:  <%= @company.employee.all.name %></h3><br>
+<h3>Client List: <%= link_to @company.client.name, client_path(@company.client)%> </h3>
+=======
+>>>>>>> 94dc1ef832f1143eb98885a8e8865207c3434bf3
 
 
 <h3>Employees:  <% @company.employees.each do |e| %><br>

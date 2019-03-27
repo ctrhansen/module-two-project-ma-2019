@@ -1,10 +1,10 @@
-<h2><%= @report.name %></h2>
+<h2>The <%= @report.name.capitalize %> Report</h2>
 <h3>Campaign: </h3>
-<%= @report.campaign.name %>
+<%= @report.campaign.name.capitalize %>
 <h3>Report Type: </h3>
-<%= @report.report_type %>
+<%= @report.report_type.capitalize %>
 <h3>Client: </h3>
-<%= @report.client %>
+<%= @report.client.capitalize %>
 <h3>Duration: </h3>
 <%= @report.duration %>
 <h3>Return on Investment: </h3>

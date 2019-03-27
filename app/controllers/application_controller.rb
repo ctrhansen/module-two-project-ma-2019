@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 #         redirect_to '/sessions'
 #     end
 # end
+
 # before_action :authenticate
 
 # def authenticate
@@ -15,6 +16,7 @@ class ApplicationController < ActionController::Base
 #         redirect_to '/sessions'
 #    end
 # end
+
 
 
 
