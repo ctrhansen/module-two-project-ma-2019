@@ -7,7 +7,11 @@ class AdsController < ApplicationController
     end
 
     def create
+        
+
         @ad = Ad.create(ad_params)
+        @ad.save
+        redirect_to '/ads'
     end
 
 
@@ -40,7 +44,7 @@ class AdsController < ApplicationController
 
     #strong_params
     def ad_params
-        params.require(:ad).permit(:name, :client_id, :ad_type, :picture, :location, :target_age, :copy, :duration, :cost)
+        params.require(:ad).permit(:name, :client_id, :ad_type, :picture, :location, :target_age, :copy, :start_date, :end_date, :cost)
     end
 
 

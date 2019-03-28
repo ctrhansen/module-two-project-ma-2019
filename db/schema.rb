@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_154650) do
     t.string "location"
     t.string "target_age"
     t.string "copy"
-    t.string "duration"
+    t.string "start_date"
+    t.string "end_date"
     t.float "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -73,7 +74,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_154650) do
     t.string "name"
     t.string "report_type"
     t.string "client"
-    t.string "duration"
+    t.string "start_date"
+    t.string "end_date"
     t.float "roi"
     t.integer "impressions"
     t.integer "views"
@@ -89,11 +91,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_154650) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", null: false
-    t.string "encrypted_password", limit: 128, null: false
-    t.string "confirmation_token", limit: 128
-    t.string "remember_token", limit: 128, null: false
+    t.string "password_digest"
     t.index ["email"], name: "index_users_on_email"
-    t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
 end

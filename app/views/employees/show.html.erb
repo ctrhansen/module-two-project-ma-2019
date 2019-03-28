@@ -1,6 +1,9 @@
 <h2><%= @employee.name %></h2>
 <h3>Photo: </h3>
 <img src = <%= @employee.photo %> alt = "<% @ad %>">
+<div>
+  <%= link_to "Edit Employee", edit_employee_path(@employee) %>
+</div>
 <h3>Name: </h3>
 <%= @employee.name %>
 <h3>Title: </h3>
@@ -9,4 +12,11 @@
 <%= @employee.company.name %>
 <h3>Email: </h3>
 <%= @employee.email %>
+<h3>Amount of ads contributed: <%= @employee.number_ads_per_employee %> </h3>
+<h3>Amount of campaigns contributed: <%= @employee.number_campaigns_per_employee %> </h3>
+
+
+
+
+
 
