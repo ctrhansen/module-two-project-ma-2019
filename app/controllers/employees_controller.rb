@@ -8,7 +8,9 @@ def new
 end
 
 def create
-    @employee = Employee.create(ad_params)
+    @employee = Employee.create(employee_params)
+    @employee.save
+    redirect_to '/employees'
 end
 
 

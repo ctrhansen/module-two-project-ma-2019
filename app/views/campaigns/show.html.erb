@@ -16,6 +16,8 @@
 <h4> Total clicks for campaign: <%=@campaign.total_clicks %></h4>
 
 
+
+
 <%= link_to "View All Reports", reports_path(@campaign) %>
 
 <%= form_tag campaign_path(@campaign.id), method: "delete" do %>

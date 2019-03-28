@@ -15,7 +15,10 @@ class Campaign < ApplicationRecord
         (self.reports.map{|r|r.clicks}.inject(:+))
     end
 
-
+    # def employees_per_campaign
+    #     self.employee.count 
+    # end
+    
 
 
 

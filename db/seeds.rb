@@ -53,7 +53,8 @@ end
         location: Faker::Hipster.word,
         target_age: Faker::Number.number(2),
         copy: Faker::Hipster.paragraph,
-        duration: Faker::Date.between(9.days.ago, Date.today).to_s,
+        start_date: Faker::Date.between(9.days.ago, Date.today).to_s,
+        end_date: Faker::Date,
         cost: Faker::Number.decimal(2)
     })
 end
@@ -73,7 +74,8 @@ end
         name: Faker::Hipster.word,
         report_type: Faker::Hipster.word,
         client: Faker::Hipster.word,
-        duration: Faker::Date,
+        start_date: Faker::Date,
+        end_date: Faker::Date,
         roi: Faker::Number.decimal(2),
         impressions: Faker::Number.number(7),
         views: Faker::Number.number(5),
