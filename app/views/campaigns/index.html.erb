@@ -1,0 +1,6 @@
+<h1>All Campaigns</h1>
+<% @campaign.each do | campaign | %>
+    <li>
+    <%= link_to campaign.name, campaign %>
+    <% end %>
+    </li>

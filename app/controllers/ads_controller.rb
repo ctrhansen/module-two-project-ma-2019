@@ -7,10 +7,10 @@ class AdsController < ApplicationController
     end
 
     def create
-        
+
 
         @ad = Ad.create(ad_params)
-        @ad.save
+        # @ad.save
         redirect_to '/ads'
     end
 
@@ -23,7 +23,7 @@ class AdsController < ApplicationController
     def index
         @ads = Ad.all
     end
-    
+
     #update
     def edit
         @ad = Ad.find(params[:id])
