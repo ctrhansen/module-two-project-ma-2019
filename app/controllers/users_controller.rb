@@ -1,4 +1,4 @@
-class UsersController < ApplicationController 
+class UsersController < ApplicationController
 
     def index
 
@@ -8,11 +8,11 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
-    def create 
+    def create
         @user = User.new(user_params)
         if @user.valid?
             @user.save
-            redirect_to root_path
+            redirect_to users_path
         else
             @user.errors.full_messages
             redirect_to new_user_path(@user)
