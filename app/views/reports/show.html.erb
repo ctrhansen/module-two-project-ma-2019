@@ -5,10 +5,12 @@
 <%= @report.report_type.capitalize %>
 <h3>Client: </h3>
 <%= @report.client.capitalize %>
-<h3>Duration: </h3>
-<%= @report.duration %>
+<h3>Start Date: </h3>
+<%= @report.start_date %>
+<h3>End Date: </h3>
+<%= @report.end_date %>
 <h3>Return on Investment: </h3>
-<%= @report.roi %>
+<%= @report.roi %>  <%= @report.amount %>
 <h3>Impressions: </h3>
 <%= @report.impressions %>
 <h3>Views: </h3>

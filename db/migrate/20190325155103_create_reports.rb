@@ -5,7 +5,8 @@ class CreateReports < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :report_type
       t.string :client
-      t.string :duration
+      t.string :start_date
+      t.string :end_date
       t.float :roi
       t.integer :impressions
       t.integer :views

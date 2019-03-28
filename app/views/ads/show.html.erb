@@ -1,4 +1,7 @@
 <h2><%= @ad.name.capitalize %></h2>
+<div>
+  <%= link_to "Edit Ad", edit_ad_path(@ad) %>
+</div>
 <h3>Name: </h3>
 <%= @ad.name.capitalize %>
 <h3>Client: </h3>
@@ -13,9 +16,16 @@
 <%= @ad.target_age %>
 <h3>Copy: </h3>
 <%= @ad.copy.capitalize %>
-<h3>Duration: </h3>
-<%= @ad.duration %>
+<h3>Start Date: </h3>
+<%= @ad.start_date %>
+<h3>End Date: </h3>
+<%= @ad.end_date %>
 <h3>Cost: </h3>
-<%= @ad.cost %>
+<%= @ad.cost %> <%= @ad.currency %>
+
+
+
+
+
 
 
