@@ -13,6 +13,16 @@ end
 #read
 def show
     @report = Report.find(params[:id])
+    respond_to do |format|
+        format.html
+        format.pdf do
+            pdf = Prawn::Document.new
+            pdf.text "Hello World"
+            send_data pdf.render, filename: "report_#{@report.report_type}.pdf",
+                                  type: "application/pdf",
+                                  disposition: "inline"
+        end
+    end
 end
 
 def index
