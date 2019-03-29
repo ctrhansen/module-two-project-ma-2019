@@ -1,25 +1,31 @@
+<div class = "indentation">
+
 <h2>The <%= @report.name.capitalize %> Report</h2>
 <h3>Campaign: </h3>
-<%= @report.campaign.name.capitalize %>
+<%= @report.campaign.name.capitalize %><br><br>
 <h3>Report Type: </h3>
-<%= @report.report_type.capitalize %>
+<%= @report.report_type.capitalize %><br><br>
 <h3>Client: </h3>
-<%= @report.client.capitalize %>
+<%= @report.client.capitalize %><br><br>
 <h3>Start Date: </h3>
-<%= @report.start_date %>
+<%= @report.start_date %><br><br>
 <h3>End Date: </h3>
-<%= @report.end_date %>
+<%= @report.end_date %><br><br>
 <h3>Return on Investment: </h3>
-<%= @report.roi %>  <%= @report.amount %>
+<%= @report.roi %>  <%= @report.amount %><br><br>
 <h3>Impressions: </h3>
-<%= @report.impressions %>
+<%= @report.impressions %><br><br>
 <h3>Views: </h3>
-<%= @report.views %>
+<%= @report.views %><br><br>
 <h3>Clicks: </h3>
-<%= @report.clicks %>
+<%= @report.clicks %><br><br>
 <h3>Reach: </h3>
-<%= @report.reach %>
+<%= @report.reach %><br><br>
 <h3>Conversions: </h3>
-<%= @report.conversions %>
+<%= @report.conversions %><br><br>
 
 <p><%= link_to "Download Report (PDF)", report_path(@report, format: "pdf") %></p>
+
+<%= link_to "BACK TO HOMEPAGE", users_path %><br><br>
+
+</div>

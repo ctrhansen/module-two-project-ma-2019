@@ -1,3 +1,5 @@
+<div class = "indentation">
+
 <h1><%=@campaign.name%></h1>
 
 <h3>Ad(s): <%= link_to @campaign.ad.name, ad_path(@campaign.ad) %></h3>
@@ -7,8 +9,8 @@
 <h3>Client: <%= link_to @campaign.client, clients_path(@client)%></h3>
 
 <div>
-  <%= link_to "Edit Campaign", edit_campaign_path(@campaign) %>
-</div>
+  <%= link_to "Edit Campaign", edit_campaign_path(@campaign) %><br>
+</div><br>
 
 <h3> STATS </h3>
 <h4> The average ROI of an ad in this campaign is: <%=@campaign.avg_roi%></h4>
@@ -18,8 +20,13 @@
 
 
 
-<%= link_to "View All Reports", reports_path(@campaign) %>
+<%= link_to "View All Reports", reports_path(@campaign) %><br><br>
 
 <%= form_tag campaign_path(@campaign.id), method: "delete" do %>
   <%= submit_tag "Delete #{@campaign.name}" %>
 <% end %>
+
+<%= link_to "BACK TO HOMEPAGE", users_path %><br><br>
+
+
+</div>

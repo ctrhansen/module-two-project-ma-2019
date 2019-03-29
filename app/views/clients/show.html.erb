@@ -1,11 +1,13 @@
+<div class = "indentation">
+
 <h1>Client: <%=@client.name%></h1>
 
-<img src=<%= @client.logo%> alt= "Client Logo">
+<img src=<%= @client.logo%> alt= "Client Logo"><br><br>
 
 
-<h3>Company: <%= link_to @client.company.name, company_path(@client.company) %></h3>
+<h3>Company: <%= link_to @client.company.name, company_path(@client.company) %></h3><br>
 
-<h3>Total Number of Ads: <%= @client.total_ads%></h3>
+<h3>Total Number of Ads: <%= @client.total_ads%></h3><br>
 
 
 <h3> Recent Ads:</h3>
@@ -13,10 +15,14 @@
   <% @client.most_recent_ads.each do |p| %>
     <li><%= link_to p.name_type, ad_path(p) %></li>
   <% end %>
-</ul>
+</ul><br>
 
-<h3> Most Expensive Ad: <%= @client.most_expensive_ad.name %> <%= @client.most_expensive_ad.cost %></h3>
+<h3> Most Expensive Ad: <%= @client.most_expensive_ad.name %> <%= @client.most_expensive_ad.cost %></h3><br>
 
 <%= form_tag client_path(@client.id), method: "delete" do %>
   <%= submit_tag "Delete #{@client.name}" %>
-<% end %>
+<% end %><br><br>
+
+<%= link_to "BACK TO HOMEPAGE", users_path %><br><br>
+
+</div>

@@ -1,3 +1,5 @@
+<div class = "indentation">
+
 <h1> Edit Client </h1>
 
 <%= form_for :client do |f| %>
@@ -9,3 +11,4 @@
   <%=f.collection_select :company_id, Company.all, :id, :name %><br>
   <%=f.submit "Edit Client"%>
 <% end %>
+</div>

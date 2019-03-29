@@ -14,7 +14,7 @@ class CampaignsController < ApplicationController
   def create
     @campaign = Campaign.new(campaign_params)
     if @campaign.save
-      redirect_to campaign_path
+      redirect_to users_path
     else
       render :new
     end
@@ -29,7 +29,7 @@ class CampaignsController < ApplicationController
   def update
     @campaign = Campaign.find(params[:id])
     if @campaign.update(campaign_params)
-      redirect_to campaign_path(@campaign)
+      redirect_to users_path
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class CampaignsController < ApplicationController
 
   def destroy
     Campaign.find(params[:id]).destroy
-    redirect_to campaign_url
+    redirect_to users_path
   end
 
   private
@@ -46,5 +46,3 @@ class CampaignsController < ApplicationController
     params.require(:campaign).permit(:name, :ad_id, :employee_id, :client)
   end
 end
-
-

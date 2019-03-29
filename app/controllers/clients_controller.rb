@@ -14,7 +14,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save
-      redirect_to client_path
+      redirect_to users_path
     else
       render :new
     end
@@ -27,7 +27,7 @@ class ClientsController < ApplicationController
   def update
     @client = Client.find(params[:id])
     if @client.update(client_params)
-      redirect_to client_path(@client)
+      redirect_to users_path
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class ClientsController < ApplicationController
 
   def destroy
     Client.find(params[:id]).destroy
-    redirect_to client_path
+    redirect_to users_path
   end
 
   private

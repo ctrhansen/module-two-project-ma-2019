@@ -1,3 +1,5 @@
+<div class = "indentation">
+
 <h1>COMPANY PROFILE</h1>
 <h2><%=@company.name%></h2>
 
@@ -32,3 +34,7 @@
 <%= form_tag company_path(@company.id), method: "delete" do %>
   <%= submit_tag "Delete #{@company.name}" %>
 <% end %>
+
+<%= link_to "BACK TO HOMEPAGE", users_path %><br><br>
+
+</div>
