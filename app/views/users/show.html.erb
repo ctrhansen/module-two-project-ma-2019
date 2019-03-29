@@ -1,18 +1,27 @@
-<h1>Dashboard</h1>
+<h1> Hello, there!</h1>
+<h2> What would you like to do? </h2><br>
 
-<a href='/ads/new'>Create New Ad</a>
+<div>
+<h3> ADS </h3>
+<%= link_to "Create a New Ad", new_ad_path %><br>
+<%= link_to "View All Ads", ads_path %><br><br>
 
+<h3> CAMPAIGNS </h3>
+<%= link_to "Create a New campaign", new_campaign_path %><br>
+<%= link_to "View All Campaigns", campaigns_path %><br><br>
 
+<h3> CLIENTS </h3>
+<%= link_to "Create a New Client", new_client_path %><br>
+<%= link_to "View All Clients", clients_path %><br><br>
 
-<a href='/employees/new'>Create New Profile</a>
+<h3> EMPLOYEES </h3>
+<%= link_to "Create a New Employee", new_employee_path %><br>
+<%= link_to "View All Employees", employees_path %><br><br>
 
+<h3> REPORTS </h3>
+<%= link_to "View All Reports", reports_path %><br><br>
 
-
-<a href='/clients/new'>Create New Client</a>
-
-
-
-<a href='/companies/new'>Create New Company</a>
+<div>
 
 
 

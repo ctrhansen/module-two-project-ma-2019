@@ -5,5 +5,9 @@ class Report < ApplicationRecord
      "Dollars"
    end
 
+   def roi(r, i)
+      ret = ((r - i) / i)
+   end
+
 
 end
