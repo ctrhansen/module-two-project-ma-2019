@@ -1,0 +1,14 @@
+<h2>Create New Employee</h2>
+<%= form_for (@ad) do |f| %>
+    <label>Name</label>
+    <%= f.text_field(:name)%><br>
+    <%= f.label(:title)%>
+    <%= f.text_string(:title)%><br>
+    <%= f.label(:company_id)%>
+    <%= f.text_integer(:company_id)%><br>
+    <%= f.label(:email)%>
+    <%= f.text_string(:email)%><br>
+    <%= f.label(:photo)%>
+    <%= f.text_string(:photo)%><br>
+    <%= f.submit %>
+    <% end %>

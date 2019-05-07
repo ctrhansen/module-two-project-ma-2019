@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
 
-    
+
 #create
 def new
     @employee = Employee.new
@@ -10,7 +10,7 @@ end
 def create
     @employee = Employee.create(employee_params)
     @employee.save
-    redirect_to '/employees'
+    redirect_to users_path
 end
 
 
@@ -37,7 +37,7 @@ end
 def destroy
     @employee = Employee.find(params[:id])
     @employee.destroy
-    redirect_to '/employees'
+    redirect_to users_path
 end
 
 

@@ -1,4 +1,7 @@
-<h1>Welcome</h1>
+
+<div class = "indentation">
+  <h1>Welcome to PlaySpace Advertising!</h1>
+<h3> Please sign in below. </h3><br>
 
 <%= form_with( url: '/sessions', method: :post ) do | form | %>
     <div class="form-group">
@@ -9,7 +12,10 @@
         <%= form.label "Password" %>
         <%= form.password_field :password %>
     </div>
-    <%= form.submit %>
+    <%= form.submit "Sign In" %><br><br>
+
+<h5> <%= link_to "Don't have an account? Sign up here!", new_user_path %></h5>
 
 
 <% end %>
+</div>

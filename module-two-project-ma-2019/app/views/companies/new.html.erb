@@ -1,0 +1,17 @@
+<h1> We are excited to have you apart of the PlaySpace Team! </h1>
+<h2> Please fill out your company's details below. </h2>
+
+<%= form_for Company.new do |f| %>
+  <%=f.label :name, "Company Name:" %><br>
+  <%=f.text_field :name %><br>
+  <%=f.label :address, "Address:" %><br>
+  <%=f.text_field :address %><br>
+  <%=f.label :website, "Website:" %><br>
+  <%=f.text_field :website %><br>
+  <%=f.label :bio, "Briefly tell us about your company:" %><br>
+  <%=f.text_area :bio, size: "24x6" %><br>
+  <%=f.label :logo, "Please upload your company's logo" %><br>
+  <%=f.file_field :logo %><br>
+  <%=f.submit "Create New Account"%>
+<% end %>
+

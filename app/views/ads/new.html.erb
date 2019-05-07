@@ -1,27 +1,30 @@
+<div class = "indentation">
+
 <h1>Create New Ad</h1>
 <%= form_for (@ad) do |f| %>
     <label>Name:</label>
-    <%= f.text_field(:name)%><br>
+    <%= f.text_field(:name)%><br><br>
     <%= f.label(:client_id)%>
-    <%= f.collection_select :client_id, Client.all, :id, :name %><br>
+    <%= f.collection_select :client_id, Client.all, :id, :name %><br><br>
     <%= f.label(:ad_type)%>
     <select name="Ad Type:">
         <option value="digital">Digital</option>
         <option value="social_media">Social Media</option>
-        <option value="traditional">Traditional</option> </select> <br>
+        <option value="traditional">Traditional</option> </select> <br><br>
     <%= f.label(:picture)%><br>
-    <%= f.file_field(:picture)%><br>
+    <%= f.file_field(:picture)%><br><br>
     <%= f.label(:location)%><br>
-    <%= f.text_field(:location)%><br>
+    <%= f.text_field(:location)%><br><br>
     <%= f.label(:target_age)%><br>
-    <%= f.text_field(:target_age)%><br>
+    <%= f.text_field(:target_age)%><br><br>
     <%= f.label(:copy)%><br>
-    <%= f.text_area(:copy)%><br>
-    <%= f.label(:start_date)%><br>
-    <%= f.text_field :start_date, as: :date %><br>
-    <%= f.label(:end_date)%><br>
-    <%= f.date_field :end_date, as: :date %><br>
-    <%= f.label(:cost)%><br>
-    <%= f.text_field(:cost)%><br>
+    <%= f.text_area(:copy)%><br><br>
+
+    <%= f.label :end_date, "Start Date"%><br>
+    <%= f.date_field :end_date, as: :date %><br><br>
+    <%= f.label :cost , "Budget"%><br>
+    <%= f.text_field(:cost)%><br><br>
     <%= f.submit %>
     <% end %>
+
+    </div>

@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find(params[:id])
     if @company.update(company_params)
-      redirect_to companies_path(@company)
+      redirect_to users_path
     else
       render :edit
     end
@@ -31,7 +31,7 @@ class CompaniesController < ApplicationController
 
   def destroy
     Company.find(params[:id]).destroy
-    redirect_to companies_path
+    redirect_to users_path
   end
 
 

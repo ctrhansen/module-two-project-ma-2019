@@ -1,3 +1,5 @@
+<div class = "indentation">
+
 <h1>Edit Form for Account: <%=@company.name%></h1>
 
 <%= form_for :company do |f| %>
@@ -13,3 +15,4 @@
   <%=f.file_field :logo %><br>
   <%=f.submit "Update Account"%>
 <% end %>
+</div>

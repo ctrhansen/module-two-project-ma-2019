@@ -1,22 +1,22 @@
-<h2><%= @employee.name %></h2>
+<div class = "indentation">
+
+<h2><%= @employee.name %></h2><br>
 <h3>Photo: </h3>
 <img src = <%= @employee.photo %> alt = "<% @ad %>">
 <div>
-  <%= link_to "Edit Employee", edit_employee_path(@employee) %>
+  <%= link_to "Edit Employee", edit_employee_path(@employee) %><br><br>
 </div>
 <h3>Name: </h3>
-<%= @employee.name %>
+<%= @employee.name %><br>
 <h3>Title: </h3>
-<%= @employee.title.capitalize %>
+<%= @employee.title.capitalize %><br>
 <h3>Company: </h3>
-<%= @employee.company.name %>
+<%= @employee.company.name %><br>
 <h3>Email: </h3>
-<%= @employee.email %>
-<h3>Amount of ads contributed: <%= @employee.number_ads_per_employee %> </h3>
-<h3>Amount of campaigns contributed: <%= @employee.number_campaigns_per_employee %> </h3>
+<%= @employee.email %><br><br>
+<h4>Amount of ads contributed: <%= @employee.number_ads_per_employee %> </h4>
+<h4>Amount of campaigns contributed: <%= @employee.number_campaigns_per_employee %> </h4><br>
 
+<%= link_to "BACK TO HOMEPAGE", users_path %><br><br>
 
-
-
-
-
+</div>

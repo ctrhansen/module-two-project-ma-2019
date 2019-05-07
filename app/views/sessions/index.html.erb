@@ -1,3 +1,5 @@
+<div class = "indentation">
+
 <%= form_with( model: @user ) do | form | %>
     <div class="form-group">
         <%= form.label "Email" %>
@@ -7,5 +9,7 @@
         <%= form.label "Password" %>
         <%= form.text_field :password, class: "form-control" %>
     </div>
-    <%= form.submit %>
+    <%= form.submit, "Sign In" %>
 <% end %>
+
+</div>

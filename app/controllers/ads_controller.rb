@@ -11,7 +11,7 @@ class AdsController < ApplicationController
 
         @ad = Ad.create(ad_params)
         # @ad.save
-        redirect_to '/ads'
+        redirect_to users_path
     end
 
 
@@ -38,7 +38,7 @@ class AdsController < ApplicationController
     def destroy
         @ad = Ad.find(params[:id])
         @ad.destroy
-        redirect_to '/ads'
+        redirect_to users_path
     end
 
 
