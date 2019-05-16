@@ -60,3 +60,5 @@ Program Structure
 - All html/css forms and styling are located in app/views
 - Styling across the application is located in views/application.html.erb
 - You can find database schema and data in db
+
+DEMO link - https://drive.google.com/file/d/1G30mpYsjShlrdHHKA-dYrVsoE4CGHjqM/view?usp=sharing
